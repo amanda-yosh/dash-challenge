@@ -1,0 +1,36 @@
+@import 'src/styles/variables.scss';
+
+*, 
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body{
+  background-color: $background;
+  font-size: 100%;
+  font-family: 'Montserrat', sans-serif;;
+  list-style-type: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  color: #000;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 8px;
+}
+
+svg {
+  width: 24px;
+  height: 24px;
+}

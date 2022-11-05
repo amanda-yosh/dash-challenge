@@ -1,10 +1,9 @@
-import './App.css';
-import SectionTitle from './components/SectionTitle/SectionTitle';
+import Companies from './panels/Companies/Companies';
 
 function App() {
   return (
     <div className="App">
-      <SectionTitle title={'Teste'} />
+      <Companies />
     </div>
   );
 }
