@@ -1,0 +1,43 @@
+@import 'src/styles/mixins.scss';
+@import 'src/styles/variables.scss';
+
+.company-container {
+  background-color: $background2;
+  width: 100%;
+  border-radius: $mediumBorderRadius;
+
+  &__header {
+    color: $title;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-bottom: 2px solid $separator;
+  }
+
+  &__main {
+    height: calc(100% - 60px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &--info {
+      @include displayFlexCenter;
+      flex-direction: column-reverse;
+
+      &:first-of-type {
+        border-right: 2px solid $separator;
+      }
+
+      &--title {
+        font-size: 14px;
+        color: $text2;
+      }
+
+      span {
+        font-weight: bold;
+        font-size: 24px;
+      }
+    }
+  }
+}
