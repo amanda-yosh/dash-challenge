@@ -1,3 +1,5 @@
+@import 'src/styles/variables.scss';
+
 .container {
   display: flex;
   align-items: center;
@@ -6,6 +8,6 @@
   span {
     font-size: 14px;
     font-weight: bold;
-    color: #7c7c8a;
+    color: $text;
   }
 }
