@@ -1,0 +1,30 @@
+// Predefined Break-points
+// Até 480px: celulares
+// 481px — 768px: iPads, Tablets
+// 769px — 1024px: Small screens, laptops, Desktops, large screens
+$desktopMin: 769px;
+$tabletMax: 768px;
+$tabletMin: 481px;
+$mobileMax: 480px;
+
+// Colors
+$background: #EAE7DC;
+$background2: #D8C3A5;
+$text: #8E8D8A;
+$text2: #E98074;
+$title: #E85A4F;
+$border: #E98074;
+$white: #FFFFFF;
+$black: #000000;
+$separator: #EAE7DC;
+
+// Z-index
+$z-index-header: 100;
+$z-index-modal: 150;
+
+// Font sizes
+$titleSize: 32px;
+
+// Border-radius
+$largeBorderRadius: 12px;
+$mediumBorderRadius: 8px;
