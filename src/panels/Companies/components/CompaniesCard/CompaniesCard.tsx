@@ -1,20 +1,20 @@
-import { ReactElement } from 'react';
+import { ComponentType } from 'react';
+import { IconBaseProps } from 'react-icons';
 import './CompaniesCard.scss';
 
 interface CompaniesCardProps {
-  logo?: ReactElement;
+  Logo: ComponentType<IconBaseProps>;
   title: string;
   totalUsers: number;
   tested: number;
 }
 
-function CompaniesCard ({logo, title, totalUsers, tested}: CompaniesCardProps) {
-  // const Logo = logo
+function CompaniesCard ({Logo, title, totalUsers, tested}: CompaniesCardProps) {
 
   return (
     <section className="company-container">
       <header className='company-container__header'>
-        {/* <Logo /> */}
+        <Logo />
         <h3>{ title }</h3>
       </header>
       <main className='company-container__main'>

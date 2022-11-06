@@ -1,7 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import CompaniesCard from './CompaniesCard';
+import { SiIntercom } from 'react-icons/si';
 
 const props = {
+  Logo: SiIntercom,
   title: "I'm a companie card!",
   totalUsers: 3,
   tested: 0.45,
