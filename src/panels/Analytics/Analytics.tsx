@@ -18,6 +18,7 @@ function Analytics() {
           sectionName={"productivity"}
           Logo={BiLoaderCircle}
           subtitle={'By department'} />
+        <p className="panel__heatmap">Heatmap</p>
       </div>
     </section>
   );
