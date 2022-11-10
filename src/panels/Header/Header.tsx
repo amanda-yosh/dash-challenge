@@ -42,10 +42,10 @@ function Header() {
   return (
     <>
       <header className={headerClass}>
-        <div className="header__menu-burguer">
+        <button className="header__menu-burguer" aria-label='menu-burguer'>
           {isMenuBurguerOpen && <HiMenu onClick={showNav} />}
           {!isMenuBurguerOpen && <RiMenuUnfoldLine onClick={showNav} />}
-        </div>
+        </button>
 
         <nav className='header__nav'>
           <ul className='header__nav--list'>
@@ -61,8 +61,8 @@ function Header() {
         </nav>
 
         <div className='header__profile'>
-          <button onClick={() => setisOpenModalMessage(true)}><AiOutlineMessage /></button>
-          <button onClick={() => setisOpenModalUser(true)}><HiOutlineUserCircle /></button>
+          <button aria-label='modal-message' onClick={() => setisOpenModalMessage(true)}><AiOutlineMessage /></button>
+          <button aria-label='modal-user' onClick={() => setisOpenModalUser(true)}><HiOutlineUserCircle /></button>
         </div>
       </header>
 
