@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/dash-challenge/static/css/main.733949b9.css",
-    "main.js": "/dash-challenge/static/js/main.dad9a7e3.js",
+    "main.css": "/dash-challenge/static/css/main.a3d83175.css",
+    "main.js": "/dash-challenge/static/js/main.72b80006.js",
     "static/js/787.c156a3f1.chunk.js": "/dash-challenge/static/js/787.c156a3f1.chunk.js",
     "index.html": "/dash-challenge/index.html",
-    "main.733949b9.css.map": "/dash-challenge/static/css/main.733949b9.css.map",
-    "main.dad9a7e3.js.map": "/dash-challenge/static/js/main.dad9a7e3.js.map",
+    "main.a3d83175.css.map": "/dash-challenge/static/css/main.a3d83175.css.map",
+    "main.72b80006.js.map": "/dash-challenge/static/js/main.72b80006.js.map",
     "787.c156a3f1.chunk.js.map": "/dash-challenge/static/js/787.c156a3f1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.733949b9.css",
-    "static/js/main.dad9a7e3.js"
+    "static/css/main.a3d83175.css",
+    "static/js/main.72b80006.js"
   ]
 }
