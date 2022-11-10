@@ -1,0 +1,11 @@
+@import 'src/styles/variables.scss';
+
+.analytics {
+  .panel {
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-gap: 24px;
+    padding: 12px;
+  }
+}
