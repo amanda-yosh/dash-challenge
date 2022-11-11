@@ -1,0 +1,36 @@
+@import 'src/styles/variables.scss';
+
+.analytics-card {
+  padding: 12px;
+  background-color: $background2;
+  border-radius: $mediumBorderRadius;
+
+  &__header {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 12px;
+
+    &--title {
+      margin-left: 12px;
+    }
+  }
+
+  &__main {
+    display: table;
+    background-color: $white;
+    border-radius: $mediumBorderRadius;
+    height: 100px;
+    width: 100%;
+
+    p {
+      padding: 24px;
+      color: $text;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
