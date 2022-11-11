@@ -1,0 +1,15 @@
+@import 'src/styles/variables.scss';
+
+.heatmap-container {
+  padding: 12px;
+  background-color: $background2;
+  border-radius: $mediumBorderRadius;
+
+  &--list {
+    &--item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}

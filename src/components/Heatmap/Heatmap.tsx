@@ -1,6 +1,9 @@
 import React from 'react'
 import { HeatMapGrid } from 'react-grid-heatmap'
 import ProgressBar from '../ProgressBar/ProgressBar'
+import { BiHappyHeartEyes, BiDizzy, BiMessageAltX, BiXCircle } from 'react-icons/bi';
+
+import './Heatmap.scss';
 
 const dictionatyy = {
   Normal: 1,
@@ -9,7 +12,7 @@ const dictionatyy = {
   Trouble: 4,
 }
 
-function Heatmap() {
+function Heatmap() {  
   const xLabels = new Array(16).fill(0).map((_, i) => `${i}`)
   const yLabels = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri']
   const dicLength = Object.keys(dictionatyy).length;
@@ -17,43 +20,35 @@ function Heatmap() {
     new Array(xLabels.length).fill(0).map(() => Math.floor(Math.random() * dicLength))
   )
 
-  const count: {[key:string]: number } = {};
-  data.map((row) => (
-    row.forEach(el => {
-      count[el] = (count[el] || 0) + 1;
-    })
-  ))
-  console.log({ count }, Object.keys(count))
-
-  const dictionary = {
-    Normal: {
-      id: 0,
-      bgcolor: "#6a1b9a",
-      completed: Object.keys(count),
-    },
-    ServiceDown: 1,
-    Critical: 2,
-    Trouble: 3,
+  interface Contador {
+    [key: string]: number;
   }
-  console.log({ dictionary })
+  const counts: Contador = {};
+
+  for (const row of data) {
+    for (const num of row) {
+      counts[num] = counts[num] ? counts[num] + 1 : 1;
+    }
+  }
 
   const testData = [
-    { bgcolor: "#6a1b9a", completed: 60 },
-    { bgcolor: "#00695c", completed: 30 },
-    { bgcolor: "#ef6c00", completed: 53 },
+    { service: 'Normal', serviceLogo: BiHappyHeartEyes, bgcolor: "#6a1b9a", completed: Math.round((counts[0]/(16*6))*100) },
+    { service: 'Service Down', serviceLogo: BiDizzy, bgcolor: "#00695c", completed: Math.round((counts[1]/(16*6))*100) },
+    { service: 'Critical', serviceLogo: BiXCircle, bgcolor: "#ef6c00", completed: Math.round((counts[2]/(16*6))*100) },
+    { service: 'Trouble', serviceLogo: BiMessageAltX, bgcolor: "#ef0097", completed: Math.round((counts[3]/(16*6))*100) },
   ];
 
   return (
-    <div style={{ width: '100%' }}>
+    <div className='heatmap-container'>
       <h3>Heatmap</h3>
       <ul>
         {testData.map((item, idx) => (
-          <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} />
+          <li className='heatmap-container--list--item' key={idx}>
+            {/* {item.serviceLogo} */}
+            {item.service}
+            <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} />
+          </li>
         ))}
-        <li>Normal</li>
-        <li>Service Down</li>
-        <li>Critical</li>
-        <li>Trouble</li>
       </ul>
       <HeatMapGrid
         data={data}
@@ -64,7 +59,6 @@ function Heatmap() {
           color: `rgb(0, 0, 0, ${ratio / 2 + 0.4})`
         })}
         cellHeight='2rem'
-
         square />
     </div>
   );
