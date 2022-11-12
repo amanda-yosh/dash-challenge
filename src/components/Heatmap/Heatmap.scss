@@ -1,15 +1,40 @@
 @import 'src/styles/variables.scss';
 
 .heatmap-container {
+  display: flex;
   padding: 12px;
   background-color: $background2;
   border-radius: $mediumBorderRadius;
+
+  &__aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 12px;
+  }
 
   &--list {
     &--item {
       display: flex;
       align-items: center;
       justify-content: space-between;
+    }
+  }
+
+  @media (max-width: $tabletMax) {
+    &--list {
+      &--item {
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  @media (max-width: $mobileMax) {
+    flex-direction: column;
+
+    &--list {
+      &--item {
+      }
     }
   }
 }

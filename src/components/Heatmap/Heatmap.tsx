@@ -1,9 +1,9 @@
 import React from 'react'
-import { HeatMapGrid } from 'react-grid-heatmap'
 import ProgressBar from '../ProgressBar/ProgressBar'
 import { BiHappyHeartEyes, BiDizzy, BiMessageAltX, BiXCircle } from 'react-icons/bi';
 
 import './Heatmap.scss';
+import HeatmapGrid from '../HeatmapGrid/HeatmapGrid';
 
 const dictionatyy = {
   Normal: 1,
@@ -40,26 +40,19 @@ function Heatmap() {
 
   return (
     <div className='heatmap-container'>
-      <h3>Heatmap</h3>
-      <ul>
-        {testData.map((item, idx) => (
-          <li className='heatmap-container--list--item' key={idx}>
-            {/* {item.serviceLogo} */}
-            {item.service}
-            <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} />
-          </li>
-        ))}
-      </ul>
-      <HeatMapGrid
-        data={data}
-        cellRender={(x, y, value) => (<div title={`Pos(${x}, ${y}) = ${value}`}>{value}</div>)}
-        cellStyle={(_x, _y, ratio) => ({
-          background: `rgb(12, 160, 44, ${ratio})`,
-          fontSize: '.8rem',
-          color: `rgb(0, 0, 0, ${ratio / 2 + 0.4})`
-        })}
-        cellHeight='2rem'
-        square />
+      <aside className='heatmap-container__aside'>
+        <h3>Heatmap</h3>
+        <ul>
+          {testData.map((item, idx) => (
+            <li className='heatmap-container--list--item' key={idx}>
+              {/* {item.serviceLogo} */}
+              {item.service}
+              <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} />
+            </li>
+          ))}
+        </ul>
+      </aside>
+      <HeatmapGrid data={data} />
     </div>
   );
 }
