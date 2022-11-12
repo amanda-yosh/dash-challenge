@@ -1,5 +1,6 @@
 @import 'src/styles/mixins.scss';
 @import 'src/styles/variables.scss';
+@import 'src/styles/colors.scss';
 
 .header {
   width: 100%;
@@ -7,7 +8,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-color: $background2;
+  background-color: $color-background2;
 
   &__menu-burguer {
     padding: 12px 24px;
