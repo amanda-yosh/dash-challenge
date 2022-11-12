@@ -1,5 +1,6 @@
 @import 'src/styles/mixins.scss';
 @import 'src/styles/variables.scss';
+@import 'src/styles/colors.scss';
 
 .bg-behind-modal {
   background-color: rgba(0, 0, 0, 0.4);
@@ -18,7 +19,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: $mediumBorderRadius;
-  background-color: $background;
+  background-color: $color-background;
 }
 
 .full-modal {
@@ -28,5 +29,5 @@
   position: fixed;
   z-index: $z-index-modal;
   top: 0;
-  background-color: $background;
+  background-color: $color-background;
 }

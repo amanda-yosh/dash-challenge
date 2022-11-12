@@ -1,4 +1,5 @@
 @import 'src/styles/variables.scss';
+@import 'src/styles/colors.scss';
 
 .container {
   display: flex;
@@ -8,6 +9,6 @@
   span {
     font-size: 14px;
     font-weight: bold;
-    color: $text;
+    color: $color-text;
   }
 }

@@ -1,8 +1,9 @@
 @import 'src/styles/variables.scss';
+@import 'src/styles/colors.scss';
 
 .analytics-card {
   padding: 12px;
-  background-color: $background2;
+  background-color: $color-background2;
   border-radius: $mediumBorderRadius;
 
   &__header {
@@ -20,14 +21,14 @@
 
   &__main {
     display: table;
-    background-color: $white;
+    background-color: $color-white;
     border-radius: $mediumBorderRadius;
     height: 100px;
     width: 100%;
 
     p {
       padding: 24px;
-      color: $text;
+      color: $color-text;
       text-align: center;
       display: table-cell;
       vertical-align: middle;
