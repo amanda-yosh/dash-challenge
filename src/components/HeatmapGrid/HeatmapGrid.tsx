@@ -1,7 +1,8 @@
+import React from 'react'
 import { HeatMapGrid } from "react-grid-heatmap";
 
 interface HeatmapGridProps {
-  data:number[][];
+  data: number[][];
   cellHeight?: string;
 }
 
