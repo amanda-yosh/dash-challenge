@@ -10,7 +10,7 @@ interface TableHeaderProps {
   children: ReactNode;
 }
 
-interface TableProps {
+interface TableBodyProps {
   children: ReactNode;
 }
 
@@ -18,9 +18,14 @@ interface TableRowProps {
   children: ReactNode;
 }
 
-function TableRow ({ children }: TableRowProps) {
+interface TableWrapperProps {
+  captionTitle?: string;
+  children: ReactNode;
+}
+
+function TableRow ({ children }: TableRowProps) : JSX.Element {
   return (
-    <tr className='table-row'>
+    <tr className='table-row' onClick={() => (console.log('OLOW'))}>
       { children }
     </tr>
   )
@@ -36,25 +41,35 @@ function TableDescription ({ children }: TableDescriptionProps) {
 
 function TableHeader ({ children }: TableHeaderProps) {
   return (
-    <th className='table-header'>
+    <thead className='table-header'>
       { children }
-    </th>
+    </thead>
   )
 }
 
-function TableBody ({ children }: TableProps) {
+function TableBody ({ children }: TableBodyProps) {
   return (
-    <table className='table'>
-      <tbody>
-        { children }
-      </tbody>
+    <tbody>
+      { children }
+    </tbody>
+  )
+}
+
+function TableWrapper ({ children, captionTitle }: TableWrapperProps) {
+  return (
+    <table className='table-container'>
+      <caption>{captionTitle}</caption>
+      { children }
     </table>
   )
 }
 
+// TableFoot
+
 export const Table = {
+  Table: TableWrapper,
+  Header: TableHeader,
   Body: TableBody,
   Row: TableRow,
-  Header: TableHeader,
   Description: TableDescription
 }

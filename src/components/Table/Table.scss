@@ -1,12 +1,16 @@
-@import 'src/styles/mixins.scss';
-@import 'src/styles/variables.scss';
+@import 'src/styles/colors.scss';
 
-.table-header {
-  padding: 12px;
-  background-color: #e1e1e1;
+.table-container {
+  border-collapse: collapse;
+  width: 100%;
 }
 
-.table {
-  width: 100%;
-  padding: 24px 12px;
+.table-header,
+.table-description {
+  border-bottom: 1px solid $color-black;
+  padding: 8px;
+}
+
+.table-header {
+  font-weight: bold;
 }
