@@ -9,7 +9,7 @@ function Users() {
   return (
     <section className="users">
       <SectionTitle title="Users" size={userData.length} />
-      <div className="users__panel">
+      <div className="panel">
         <Table.Table>
           <Table.Header>
             <Table.Row>
@@ -21,11 +21,11 @@ function Users() {
           <Table.Body>
             {userData.map(({name, email, role, phone, status, waterfall}) => (
               <Table.Row key={name + '0'}>
-                <Table.Description>
-                  <div>img</div>
+                <Table.Description extraClass={'panel__user'}>
+                  <div className="panel__user--img"></div>
                   <div>
-                    <p>{name}</p>
-                    <p>{email}</p>
+                    <p className="panel__user--name">{name}</p>
+                    <p className="panel__user--email">{email}</p>
                   </div>
                 </Table.Description>
                 <Table.Description>{role}</Table.Description>

@@ -9,7 +9,7 @@ const STATUS = {
   PENDING: 'Pending',
 };
 
-export const userTableHeader = ['Name', 'Role', 'Phone', 'Status', 'Waterfall']
+export const userTableHeader = ['Name', 'Role', 'Phone', 'Status', 'Waterfall', '']
 
 export const userData = [
   {

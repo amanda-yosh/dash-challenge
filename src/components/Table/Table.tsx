@@ -4,6 +4,7 @@ import './Table.scss';
 
 interface TableDescriptionProps {
   children: ReactNode;
+  extraClass?: string;
 }
 
 interface TableHeaderProps {
@@ -31,9 +32,9 @@ function TableRow ({ children }: TableRowProps) : JSX.Element {
   )
 }
 
-function TableDescription ({ children }: TableDescriptionProps) {
+function TableDescription ({ children, extraClass = '' }: TableDescriptionProps) {
   return (
-    <td className='table-description'>
+    <td className={'table-description ' + extraClass}>
       { children }
     </td>
   )
@@ -58,7 +59,7 @@ function TableBody ({ children }: TableBodyProps) {
 function TableWrapper ({ children, captionTitle }: TableWrapperProps) {
   return (
     <table className='table-container'>
-      <caption>{captionTitle}</caption>
+      <caption className='table-container--caption'>{captionTitle}</caption>
       { children }
     </table>
   )
