@@ -1,0 +1,28 @@
+@import 'src/styles/colors.scss';
+
+.users {
+  .panel {
+    &__user {
+      display: flex;
+      align-items: center;
+      text-align: start;
+
+      &--img {
+        background-image: url('https://randomuser.me/api/portraits/thumb/men/75.jpg');
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        border: 2px solid $color-black;
+        margin-right: 16px;
+      }
+
+      &--name {
+        font-weight: bold;
+      }
+
+      &--email {
+        font-size: 14px;
+      }
+    }
+  }
+}
