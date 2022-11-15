@@ -4,3 +4,8 @@
   @include gridContainer;
   gap: 36px;
 }
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
