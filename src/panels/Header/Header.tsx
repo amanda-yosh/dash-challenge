@@ -61,8 +61,18 @@ function Header() {
         </nav>
 
         <div className='header__profile'>
-          <button aria-label='modal-message' onClick={() => setisOpenModalMessage(true)}><AiOutlineMessage /></button>
-          <button aria-label='modal-user' onClick={() => setisOpenModalUser(true)}><HiOutlineUserCircle /></button>
+          <button
+            className='header__profile--message'
+            aria-label='modal-message'
+            onClick={() => setisOpenModalMessage(true)}>
+              <AiOutlineMessage />
+          </button>
+          <button
+            className='header__profile--user'
+            aria-label='modal-user'
+            onClick={() => setisOpenModalUser(true)}>
+              <HiOutlineUserCircle />
+          </button>
         </div>
       </header>
 
