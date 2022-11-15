@@ -9,7 +9,9 @@ import SearchBar from './panels/SearchBar/SearchBar';
 function App() {
   return (
     <div className="App">
-      <Header />
+      <div className='sticky'>
+        <Header />
+      </div>
       <section className='main-container'>
         <SearchBar />
         <Analytics />
