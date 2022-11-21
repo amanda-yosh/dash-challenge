@@ -14,7 +14,7 @@ const Modal = ({ setIsOpen, children, isCenterModal = false }: ModalProps) => {
       {isCenterModal && <div className='bg-behind-modal' onClick={() => setIsOpen(false)} />}
       <div className={isCenterModal ? 'center-modal' : 'full-modal'}>
         { children }
-        <button onClick={() => setIsOpen(false)}>Voltar</button>
+        <button className="button-modal" onClick={() => setIsOpen(false)}>Voltar</button>
       </div>
     </>
   );

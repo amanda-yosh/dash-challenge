@@ -3,7 +3,7 @@
 @import 'src/styles/colors.scss';
 
 .bg-behind-modal {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -20,6 +20,7 @@
   transform: translate(-50%, -50%);
   border-radius: $mediumBorderRadius;
   background-color: $color-background;
+  padding: 24px;
 }
 
 .full-modal {
@@ -30,4 +31,17 @@
   z-index: $z-index-modal;
   top: 0;
   background-color: $color-background;
+}
+
+.button-modal {
+  padding: 12px;
+  margin-top: 12px;
+  background-color: $color-background-inverted-2;
+  border-radius: $mediumBorderRadius;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-background-inverted-hover;
+    color: $color-text-inverted;
+  }
 }

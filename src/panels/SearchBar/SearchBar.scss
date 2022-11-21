@@ -3,12 +3,14 @@
 
 .search {
   &__report {
-    background-color: pink;
+    background-color: $color-text-inverted;
     padding: 12px 16px;
     border-radius: $mediumBorderRadius;
+    font-weight: bold;
 
     &:hover {
-      background-color: palevioletred;
+      background-color: $color-text-inverted-hover;
+      color: $color-text-inverted;
     }
   }
 }
@@ -20,10 +22,14 @@
   gap: 12px;
   border-radius: $largeBorderRadius;
   padding: 12px 16px;
-  background-color: $color-background2;
+  background-color: $color-background-inverted;
 
   &:focus-within {
-    outline: 2px solid $color-border;
+    outline: 2px solid $color-text-inverted-hover;
+  }
+
+  svg {
+    color: $color-text-inverted;
   }
 }
 
@@ -31,7 +37,7 @@
   background: transparent;
   outline: none;
   border: none;
-  color: $color-black;
+  color: $color-text-inverted;
   font-size: 14px;
   display: flex;
   flex: 1 1 0%;

@@ -4,11 +4,11 @@
 
 .header {
   width: 100%;
-  padding: 16px 24px;
+  padding: 8px 24px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-color: $color-background2;
+  background-color: $color-background-inverted;
 
   &__menu-burguer {
     padding: 12px 24px;
@@ -28,12 +28,34 @@
         margin: 0 24px;
 
         &:first-of-type { margin: 0; }
+
+        & a {
+          color: $color-text-inverted;
+
+          &:hover {
+            color: $color-text-inverted-hover;
+          }
+        }
       }
     }
   }
 
   &__profile {
     display: none;
+
+    &--message {
+      margin-right: 16px;
+    }
+
+    &--message,
+    &--user {
+      cursor: pointer;
+      color: $color-text-inverted;
+
+      &:hover {
+        color: $color-text-inverted-hover;
+      }
+    }
   }
 
   &.active {
