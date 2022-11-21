@@ -8,13 +8,13 @@ const props = {
 }
 
 describe('ProgressBar', () => {
-  test('renders title and size', () => {
+  test('renders title and size', async () => {
     render(<ProgressBar {...props }/>);
 
     const titleElement = screen.getByText(props.completed + '%');
     expect(titleElement).toBeInTheDocument();
 
-    const colorBg = screen.getByLabelText("progress-bar")
+    const colorBg = await screen.findByTestId("progress-bar")
     expect(colorBg).toHaveStyle("background-color: " + props.bgcolor);
   });
 });

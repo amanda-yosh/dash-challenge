@@ -27,7 +27,7 @@ function ProgressBar({ bgcolor, completed }: ProgressBarProps) {
 
   return (
     <div style={containerStyles}>
-      <div style={fillerStyles}>
+      <div data-testid="progress-bar" style={fillerStyles}>
         <span style={labelStyles}>{`${completed}%`}</span>
       </div>
     </div>
