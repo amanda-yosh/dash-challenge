@@ -2,6 +2,7 @@ import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import "./Analytics.scss";
 import AnalyticsCard from "./components/AnalyticsCard/AnalyticsCard";
 import { BiLoaderCircle } from 'react-icons/bi';
+import Heatmap from "../../components/Heatmap/Heatmap";
 
 function Analytics() {
   return (
@@ -18,7 +19,7 @@ function Analytics() {
           sectionName={"productivity"}
           Logo={BiLoaderCircle}
           subtitle={'By department'} />
-        <p className="panel__heatmap">Heatmap</p>
+        <Heatmap />
       </div>
     </section>
   );
